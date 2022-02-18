@@ -16,11 +16,15 @@ class TaskSeeder extends Seeder
     public function run()
     {
         DB::table('tasks')->insert([
-            'tarea'=> 'Ejemplo 1',
-            'descripcion' => "Es una descripcion",
-            'tipo'=> 'Escuela'
+            'tarea'=> 'Practica seeders',
+            'descripcion' => "Creacion de seeder para tabla tasks",
+            'tipo'=> 'Escuela',
+            'created_at' => now(),
+            'updated_at' =>now()
             
-        ]);
+        ]
+    
+    );
 
     }
 }
