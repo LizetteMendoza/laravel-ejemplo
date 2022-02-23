@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\TareasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/indexTareas', function(){
-    $tareas = DB::table('tasks')->get();
-    return view('tareas/indexTareas', compact('tareas'));
-});
+Route::resource('/tareas', TareasController::class);
+//Route::get('/tareas/index', [TareasController::class, 'index']);
+
+//Route::get('/tareas/create', [TareasController::class, 'create']);  
+
+//Route::post('/tareas/store',  [TareasController::class, 'store'])->name('tareas.store');
+    
+    //Validaciones
+    //Guardar a DB
+    //Redireccionar
+
+
 
 Route::get('/hola-mundo', function () {
     return view('paginas/hola-mundo');
