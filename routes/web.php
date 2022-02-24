@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\TareasController;
+use App\Http\Controllers\TasksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/tareas', TareasController::class);
+Route::resource('/tareas', TasksController::class);
 //Route::get('/tareas/index', [TareasController::class, 'index']);
 
 //Route::get('/tareas/create', [TareasController::class, 'create']);  
